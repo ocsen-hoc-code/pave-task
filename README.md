@@ -1,7 +1,10 @@
 # pave-task
 Start Docker: `docker-compose up -d`
+
 Stop Docker: `docker-compose down`
+
 Run migrate datbase: `npx sequelize-cli db:migrate`
+
 Start project: `npm start`
 
 Task Api:
