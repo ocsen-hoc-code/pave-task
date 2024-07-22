@@ -13,5 +13,5 @@ Task Api:
 Information:
 + Express Framework
 + Sequelize
-+ Express Validation
++ Express Valilator
 + Docker + Docker Composer
