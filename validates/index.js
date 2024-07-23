@@ -1,5 +1,5 @@
 const { body, validationResult } = require("express-validator");
-const { STATUS } = require("../constants");
+const { STATUS, HTTP_STATUS } = require("../constants");
 
 const STATUS_VALID = [STATUS.COMPLETED, STATUS.PENDING, STATUS.INPROCESS];
 
@@ -32,7 +32,7 @@ const updateTaskValidation = [
 const handleValidationErrors = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res.status(HTTP_STATUS.BAD_REQUEST).json({ errors: errors.array() });
     }
     next();
 };
